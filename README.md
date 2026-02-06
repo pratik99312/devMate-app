@@ -2,9 +2,24 @@
 
 - Create a Vite + React application
 - Remove unnecessary code and create a Hello world app
-- Install Tailwind CSS
-- Install Daisy UI
+- Install Tailwind CSS - "https://tailwindcss.com/docs/installation/framework-guides"
+- Install Daisy UI - "https://daisyui.com/docs/colors/"
 - Add NavBar component to App.jsx
+- Create a NavBar.jsx seperate Component file
+- Install react router Dom- link - "https://reactrouter.com/6.30.3/start/tutorial"
+- Create BrowserRouter > Routes > Route=/ Body > RouteChildren
+- Create an Outlst in your body component
+- Create a Footer 
+
+Body 
+    Navbar 
+    Route=/  => Feed
+    Route=/login  => Login
+    Route=/connections => Connections
+    Route=/profile => Profile
+
+
+
 
 
 
