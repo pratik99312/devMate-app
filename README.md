@@ -1,4 +1,4 @@
-# DevMate 
+# DevMate
 
 - Create a Vite + React application
 - Remove unnecessary code and create a Hello world app
@@ -9,47 +9,25 @@
 - Install react router Dom- link - "https://reactrouter.com/6.30.3/start/tutorial"
 - Create BrowserRouter > Routes > Route=/ Body > RouteChildren
 - Create an Outlst in your body component
-- Create a Footer 
-
-Body 
-    Navbar 
-    Route=/  => Feed
-    Route=/login  => Login
-    Route=/connections => Connections
-    Route=/profile => Profile
-
-
-
-
-
+- Create a Footer
+- Create a Login Page
+- Install axios
+- CORS - install cors in backened =>add middleware to with congigurations: origin, credentials:true
+- Whenever you're making API call so pass {withCredentials:true}
+- Install Redux Toolkit - Install react-redux - https://redux-toolkit.js.org/tutorials/quick-start 
+- configureStore => provider =>createSlice => add reducer to store
+- Add Redux devtools in Chrome
+- Login and see if yor date is coming properly in the store
+- Navbar should update as soon as the user logs in
+- Refractor our code to add constants file + create a components folder
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Body
+Navbar
+Route=/ => Feed
+Route=/login => Login
+Route=/connections => Connections
+Route=/profile => Profile
 
 # React + Vite
 
