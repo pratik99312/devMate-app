@@ -20,6 +20,10 @@
 - Login and see if yor date is coming properly in the store
 - Navbar should update as soon as the user logs in
 - Refractor our code to add constants file + create a components folder
+- You should not be access other routes without login
+- if Token is not present, redirect user to login Page
+- Logout 
+- profile page
 
 
 Body

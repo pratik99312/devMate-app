@@ -9,6 +9,7 @@ const Login = () => {
   const navigate = useNavigate();
   const [emailId, setEmailId] = useState("Anna@gmail.com");
   const [password, setPassword] = useState("Anna@123456");
+  const [error,setError] = useState("")
 
   const dispatch = useDispatch();
 
@@ -34,6 +35,9 @@ const Login = () => {
       dispatch(addUser(res.data));
       navigate("/");
     } catch (error) {
+      setError(error?.response?.data || "Something went wrong")
+        console.log("Axios error:", error); // full error
+      console.log("Axios error response:", error.response); // response object
       console.log("Error response:", error.response?.data);
     }
   };
@@ -67,6 +71,9 @@ const Login = () => {
               />
             </fieldset>
           </div>
+          <p className="text-red-500">
+          {error}
+          </p>
           <div className="card-actions justify-center">
             <button className="btn bg-secondary" onClick={handleLogin}>
               Login
