@@ -7,7 +7,7 @@ import { BASE_URL } from "../utils/constant";
 
 const Login = () => {
   const navigate = useNavigate();
-  const [emailId, setEmailId] = useState("Anna@gmail.com");
+  const [emailId, setEmailId] = useState("Anna2@gmail.com");
   const [password, setPassword] = useState("Anna@123456");
   const [error,setError] = useState("")
 
@@ -15,10 +15,10 @@ const Login = () => {
 
   const handleLogin = async () => {
     try {
-      console.log("Sending:", {
-        emailId,
-        password,
-      });
+      // console.log("Sending:", {
+      //   emailId,
+      //   password,
+      // });
 
       const res = await axios.post(
         BASE_URL + "/login",
@@ -36,9 +36,9 @@ const Login = () => {
       navigate("/");
     } catch (error) {
       setError(error?.response?.data || "Something went wrong")
-        console.log("Axios error:", error); // full error
-      console.log("Axios error response:", error.response); // response object
-      console.log("Error response:", error.response?.data);
+      //   console.log("Axios error:", error); // full error
+      // console.log("Axios error response:", error.response); // response object
+      // console.log("Error response:", error.response?.data);
     }
   };
 
