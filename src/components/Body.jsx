@@ -22,9 +22,9 @@ const Body = () => {
       if (error.status === 401) {
         navigate("/login");
       }
-      console.log("Axios error:", error); // full error
-      console.log("Axios error response:", error.response); // response object
-      console.log("Axios error data:", error.response?.data); // backend message
+      // console.log("Axios error:", error); // full error
+      // console.log("Axios error response:", error.response); // response object
+      // console.log("Axios error data:", error.response?.data); // backend message
     }
   };
 
@@ -35,11 +35,16 @@ const Body = () => {
   }, []);
 
   return (
-    <div>
-      <NavBar />
-      <Outlet />
-      <Footer />
-    </div>
+  <div className="flex flex-col min-h-screen bg-gradient-to-b from-slate-900 to-slate-800">
+  <NavBar />
+
+  <main className="flex-grow">
+    <Outlet />
+  </main>
+
+  <Footer />
+</div>
+
   );
 };
 
