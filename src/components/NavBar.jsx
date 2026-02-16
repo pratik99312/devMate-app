@@ -13,8 +13,8 @@ const NavBar = () => {
   const handleLogout = async () => {
     try {
       await axios.post(BASE_URL + "/logout", {}, { withCredentials: true });
-      dispatch(removeUser())
-      return navigate("/login")
+      dispatch(removeUser());
+      return navigate("/login");
     } catch (error) {}
   };
 
@@ -59,7 +59,10 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to={'/connections'} >Connections</Link>
+                  <Link to={"/connections"}>Connections</Link>
+                </li>
+                <li>
+                  <Link to={"/requests"}>Request</Link>
                 </li>
                 <li>
                   <a onClick={handleLogout}>Logout</a>
