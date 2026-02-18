@@ -14,7 +14,7 @@
 - Install axios
 - CORS - install cors in backened =>add middleware to with congigurations: origin, credentials:true
 - Whenever you're making API call so pass {withCredentials:true}
-- Install Redux Toolkit - Install react-redux - https://redux-toolkit.js.org/tutorials/quick-start 
+- Install Redux Toolkit - Install react-redux - https://redux-toolkit.js.org/tutorials/quick-start
 - configureStore => provider =>createSlice => add reducer to store
 - Add Redux devtools in Chrome
 - Login and see if yor date is coming properly in the store
@@ -22,7 +22,7 @@
 - Refractor our code to add constants file + create a components folder
 - You should not be access other routes without login
 - if Token is not present, redirect user to login Page
-- Logout 
+- Logout
 - profile page
 - Get the feed and add the feed in the store
 - build the user card on feed
@@ -34,8 +34,70 @@
 - Send/ignore the user card from feed
 
 Remaining:
+
 - Signup New User
 - E2ETesting
+
+# Deployment
+
+- Signup on AWS
+- Launch instance
+- chmod 400 <secret>.pem
+- ssh -i "devmateseckey.pem" ubuntu@ec2-13-61-181-157.eu-north-1.compute.amazonaws.com
+- install node version
+- Git clone ""
+
+## Frontend
+
+- npm install -> dependencies install
+- npm run build
+- sudo apt update
+- sudo apt install nginx
+- sudo systemctl start nginx
+- sudo systemctl enable nginx
+- cpoy code from dist(build files) to /var/www/html/
+- sudo scp -r dist/\* /var/www/html/ ------> to copy file from dist to /var/www/html/
+- Enable post :80 of your instance
+
+## Backened
+
+- updated DB password
+- allowed ec2 instance public IP on mongo database
+- installed npm install pm2 -g
+- pm2 start npm --name "devmate-backened" -- start
+- pm2 logs
+- pm2 list, pm2 flush <name>,pm2 stop, pm2 delete <name>
+- config nginx - /etc/nginx/sites-available/default
+- restart nginx - sudo systemctl restart nginx
+- Modify the BASEURL in frontend project to "/api"
+
+
+
+Frontend = http://13.61.181.157/
+Backened = http://13.61.181.157:7777/
+
+Domain name = devmate.com => 13.61.181.157
+
+frontend = devmate.com
+backened = devmate.com:7777 => devmate.com/api
+
+sudo nano /etc/nginx/sites-available/default
+
+
+nginx config
+
+ server_name 13.61.181.157;
+
+ location /api/ {
+        proxy_pass http://localhost:7777/;
+        proxy_http_version 1.1;
+        
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+
 
 
 Body
