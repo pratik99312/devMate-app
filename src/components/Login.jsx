@@ -97,7 +97,7 @@ const Login = () => {
           )}
           <div>
             <fieldset className="fieldset">
-              <legend className="fieldset-legend">Email ID :{emailId}</legend>
+              <legend className="fieldset-legend">Email ID :</legend>
               <input
                 type="text"
                 value={emailId || ""}
@@ -109,7 +109,7 @@ const Login = () => {
           </div>
           <div>
             <fieldset className="fieldset">
-              <legend className="fieldset-legend">Password : {password}</legend>
+              <legend className="fieldset-legend">Password : </legend>
               <input
                 type="password"
                 value={password || ""}

@@ -23,7 +23,7 @@ export const Feed = () => {
 
   useEffect(() => {
     getFeed();
-  }, []);
+  }, [feed]);
 
   if (!feed) return;
 
