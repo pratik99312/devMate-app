@@ -1,6 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+const navigate= useNavigate();
+
   return (
   <footer className="footer sm:footer-horizontal bg-base-300 text-base-content p-10">
 
@@ -17,6 +20,13 @@ const Footer = () => {
         <a className="link link-hover">Contact</a>
         <a className="link link-hover">Jobs</a>
         <a className="link link-hover">Press kit</a>
+      </nav>
+        <nav>
+        <h6 className="footer-title">Terms And Policies</h6>
+        <a className="link link-hover" onClick={() => navigate("/privacy")}>Privacy Policy</a>
+        <a className="link link-hover" onClick={() => navigate("/terms")}>Terms of Service</a>
+        <a className="link link-hover" onClick={() => navigate("/refund-policy")}>Refund Policy</a>
+        <a className="link link-hover" onClick={() => navigate("/contact-us")}>Contact Us</a>
       </nav>
       <nav>
         <h6 className="footer-title">Social</h6>

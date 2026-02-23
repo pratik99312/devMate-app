@@ -120,6 +120,29 @@ proxy_http_version 1.1;
 - write code for sending email address
 - Make the email dynamic by passing more params to the run function
 
+# Learn Manage Multiple Environments
+
+- https://github.com/motdotla/dotenv --> For PRODUCTION - For DEVELOPMENT
+
+# Scheduling cron jobs in NodeJS
+
+- Installing node-cron
+- Learning about cron expressions synxtax - crontab.guru
+- Schedule a job
+- date-fns - library to install date functionality
+- Find all the unique email Id who have got connection Request in previous day
+- Send Email
+- Explore queue mechanism to send buld emails
+- Amazon SES Bulk Emails
+- Make sendEmail function dynamic
+- bee-queue & bull npm packages
+
+# Razorpay Payment Gateway Integration
+
+- Signup on Razorpay and complete KYC
+- Cerated a UI for premium page
+- Creating an API for create order in backened
+
 Body
 Navbar
 Route=/ => Feed
