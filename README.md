@@ -138,7 +138,6 @@ proxy_http_version 1.1;
 - bee-queue & bull npm packages
 
 # Razorpay Payment Gateway Integration
-
 - Signup on Razorpay and complete KYC
 - Cerated a UI for premium page
 - Creating an API for create order in backened
@@ -153,6 +152,20 @@ proxy_http_version 1.1;
 - Ref - https://github.com/razorpay/razorpay-node/tree/master/documents
 - Ref - https://razorpay.com/docs/webhooks/validate-test/
 - ref - https://razorpay.com/docs/webhooks/payments/
+
+# Real Time Chat using using Websocket(Socket.io)
+- Build the UI for a chat window on /chat/:targetUserId
+- setup socket.io in backend
+- npm i socket.io
+- Setup frontend socket.io-client
+- Initialise the chat
+- createSocketConnection
+- listen to events
+- Improve the UI - Homework
+- Fix Security Bug - Homework - can i send messages to a person who is not my friend? - Auth in webSockets
+- Homework : Feat: Show Green Symbol when online???? - [last Seen 2 hours Ago]
+- Homework: Limit messages when fetching from DB - Build Pagination
+
 
 Body
 Navbar

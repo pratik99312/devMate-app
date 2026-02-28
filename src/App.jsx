@@ -13,6 +13,7 @@ import TermsCondition from "./components/TermsCondition";
 import RefundPolicy from "./components/RefundPolicy";
 import Teams from "./components/Teams";
 import ContactUs from "./components/ContactUs";
+import Chat from "./components/Chat";
 
 function App() {
   return (
@@ -32,6 +33,10 @@ function App() {
               <Route path="/refund-policy" element={<RefundPolicy />} />
               <Route path="/teams" element={<Teams />} />
               <Route path="/contact-us" element={<ContactUs />} />
+              <Route
+                path="/chat/:targetUserId"
+                element={<Chat key={window.location.pathname} />}
+              />
             </Route>
           </Routes>
         </BrowserRouter>
